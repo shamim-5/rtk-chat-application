@@ -23,7 +23,6 @@ export default function Register() {
     }
     if (data?.accessToken && data?.user) {
         navigate("/inbox");
-        console.log(data?.accessToken, data?.user);
     }
   }, [data, responseError, navigate]);
 
