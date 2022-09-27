@@ -1,34 +1,16 @@
 {
   "users": [
     {
-      "email": "lws@gmail.com",
-      "password": "$2a$10$F6VLzLL1fWMBf7G9E288N.874KRap0isms188/JP7dW/LWnk5Y7Ja",
-      "name": "lws",
-      "id": 1
-    },
-    {
-      "email": "try@gmial.com",
-      "password": "$2a$10$kBIEF0AK6ul..r4qT2wkde4I4ma8lWJTnZ9I/fF14dLcL625IO59e",
-      "name": "Try Again",
-      "id": 2
-    },
-    {
-      "email": "try1@gmial.com",
-      "password": "$2a$10$xdH.k9IQLQ56ysVR7.7KEehu1BBd1g6S.WORP7Es3DihfXY5oK/8i",
-      "name": "Try Again",
-      "id": 3
-    },
-    {
-      "email": "try3@gmial.com",
-      "password": "$2a$10$vbCOer5pKoJDC9c9dd38OudJ4/Nu2v86nYIC2nmSeIxUXB.veYzX6",
-      "name": "Try Again",
-      "id": 4
-    },
-    {
       "email": "try4@gmial.com",
       "password": "$2a$10$u7jzzBE9dAEwqEakCyBcBOas1Ylx50zq5jXPV42iWi.hAQdaQYbuW",
       "name": "Try Again",
       "id": 5
+    },
+    {
+      "email": "sumit@learnwithsumit.com",
+      "password": "$2a$10$P2g6eBfjptBbb0lAux6BNOWXbEtZwSVdNfgYUiYlMq5el01CczY..",
+      "name": "learnwithsumit",
+      "id": 6
     }
   ],
   "conversations": [
