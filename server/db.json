@@ -11,6 +11,12 @@
       "password": "$2a$10$P2g6eBfjptBbb0lAux6BNOWXbEtZwSVdNfgYUiYlMq5el01CczY..",
       "name": "learnwithsumit",
       "id": 6
+    },
+    {
+      "email": "akash@learnwithsumit.com",
+      "password": "$2a$10$BReJJQpEtA8gxmGERJ/FNesIWP.pJsHSousG1sWzx0dkHbxYIWxFy",
+      "name": "Akash Ahmed",
+      "id": 7
     }
   ],
   "conversations": [
