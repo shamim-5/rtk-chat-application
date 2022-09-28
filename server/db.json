@@ -27,22 +27,22 @@
   ],
   "conversations": [
     {
-      "participants": "sumit@learnwithsumit.com-akash@learnwithsumit.com",
+      "participants": "akash@learnwithsumit.com-sumit@learnwithsumit.com",
       "users": [
         {
-          "email": "sumit@learnwithsumit.com",
-          "name": "learnwithsumit",
-          "id": 4
-        },
-        {
           "email": "akash@learnwithsumit.com",
-          "password": "$2a$10$eAVA8MDJ9/zhQMdz9N7jduFXdfOqqP1H/zwcipj4ztJI0wLh4hjBW",
           "name": "Akash Ahmed",
           "id": 3
+        },
+        {
+          "email": "sumit@learnwithsumit.com",
+          "password": "$2a$10$tzw0ussOAR9jaefyeyoYuuaxLHVfL8yWSfivEFjt57EOJ4byJrNp.",
+          "name": "learnwithsumit",
+          "id": 4
         }
       ],
-      "message": "electicity gone",
-      "timestamp": 1664388771193,
+      "message": "chat functionality updated. check all thing done.................................................\n",
+      "timestamp": 1664391512152,
       "id": 1
     }
   ],
@@ -193,6 +193,90 @@
       "message": "electicity gone",
       "timestamp": 1664388771193,
       "id": 9
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "learnwithsumit",
+        "id": 4
+      },
+      "receiver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$eAVA8MDJ9/zhQMdz9N7jduFXdfOqqP1H/zwcipj4ztJI0wLh4hjBW",
+        "name": "Akash Ahmed",
+        "id": 3
+      },
+      "message": "check ",
+      "timestamp": 1664390967214,
+      "id": 10
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "learnwithsumit",
+        "id": 4
+      },
+      "receiver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$eAVA8MDJ9/zhQMdz9N7jduFXdfOqqP1H/zwcipj4ztJI0wLh4hjBW",
+        "name": "Akash Ahmed",
+        "id": 3
+      },
+      "message": "okay",
+      "timestamp": 1664390999619,
+      "id": 11
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "learnwithsumit",
+        "id": 4
+      },
+      "receiver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$eAVA8MDJ9/zhQMdz9N7jduFXdfOqqP1H/zwcipj4ztJI0wLh4hjBW",
+        "name": "Akash Ahmed",
+        "id": 3
+      },
+      "message": "okay",
+      "timestamp": 1664391008051,
+      "id": 12
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "akash@learnwithsumit.com",
+        "name": "Akash Ahmed",
+        "id": 3
+      },
+      "receiver": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "learnwithsumit",
+        "id": 4
+      },
+      "message": "pessimestic update done",
+      "timestamp": 1664391453319,
+      "id": 13
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "akash@learnwithsumit.com",
+        "name": "Akash Ahmed",
+        "id": 3
+      },
+      "receiver": {
+        "email": "sumit@learnwithsumit.com",
+        "password": "$2a$10$tzw0ussOAR9jaefyeyoYuuaxLHVfL8yWSfivEFjt57EOJ4byJrNp.",
+        "name": "learnwithsumit",
+        "id": 4
+      },
+      "message": "chat functionality updated. check all thing done.................................................\n",
+      "timestamp": 1664391512152,
+      "id": 14
     }
   ]
 }

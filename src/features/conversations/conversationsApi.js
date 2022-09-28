@@ -46,7 +46,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
         // optimistic cache update start
-        const patchResult1 = dispatch(
+        const patchResult = dispatch(
           apiSlice.util.updateQueryData("getConversations", arg.sender, (draft) => {
             const draftConversation = draft.find((c) => c.id == arg.id);
             draftConversation.message = arg.data.message;
@@ -63,7 +63,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
             const senderUser = users.find((user) => user.email === arg.sender);
             const receiverUser = users.find((user) => user.email !== arg.sender);
 
-            dispatch(
+            const res = await dispatch(
               messagesApi.endpoints.addMessage.initiate({
                 conversationId: conversation?.data?.id,
                 sender: senderUser,
@@ -71,10 +71,18 @@ export const conversationsApi = apiSlice.injectEndpoints({
                 message: arg.data.message,
                 timestamp: arg.data.timestamp,
               })
+            ).unwrap();
+
+            // update messages cache pessimistically start
+            dispatch(
+              apiSlice.util.updateQueryData("getMessages", res.conversationId.toString(), (draft) => {
+                draft.push(res);
+              })
             );
+            // update messages cache pessimistically end
           }
         } catch (err) {
-          patchResult1.undo();
+          patchResult.undo();
         }
       },
     }),
