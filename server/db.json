@@ -41,8 +41,8 @@
           "id": 4
         }
       ],
-      "message": "chat functionality updated. check all thing done.................................................\n",
-      "timestamp": 1664391512152,
+      "message": "okay",
+      "timestamp": 1664393289578,
       "id": 1
     }
   ],
@@ -277,6 +277,23 @@
       "message": "chat functionality updated. check all thing done.................................................\n",
       "timestamp": 1664391512152,
       "id": 14
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "akash@learnwithsumit.com",
+        "name": "Akash Ahmed",
+        "id": 3
+      },
+      "receiver": {
+        "email": "sumit@learnwithsumit.com",
+        "password": "$2a$10$tzw0ussOAR9jaefyeyoYuuaxLHVfL8yWSfivEFjt57EOJ4byJrNp.",
+        "name": "learnwithsumit",
+        "id": 4
+      },
+      "message": "okay",
+      "timestamp": 1664393289578,
+      "id": 15
     }
   ]
 }
