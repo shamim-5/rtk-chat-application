@@ -7,7 +7,7 @@ export default function ChatHead({ message }) {
 
   const { sender, receiver } = message || {};
 
-  const partnerEmail = sender.email === email ? receiver : sender.email;
+  const partnerEmail = sender.email === email ? receiver.email : sender.email;
 
   const partnerName = sender.email === email ? receiver.name : sender.name;
 
