@@ -32,8 +32,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
           await cacheDataLoaded;
           socket.on("conversation", (data) => {
             updateCachedData((draft) => {
-              const conversation = draft.data.find((c) => c.id == data?.data?.id);
-
+              const conversation = draft?.data.find((c) => c.id == data?.data?.id);
               if (conversation?.id) {
                 conversation.message = data?.data?.message;
                 conversation.timestamp = data?.data?.timestamp;
@@ -139,7 +138,8 @@ export const conversationsApi = apiSlice.injectEndpoints({
             // update messages cache pessimistically start
             dispatch(
               apiSlice.util.updateQueryData("getMessages", res.conversationId.toString(), (draft) => {
-                draft.push(res);
+                // draft.push(res);
+                console.log(res);
               })
             );
             // update messages cache pessimistically end
