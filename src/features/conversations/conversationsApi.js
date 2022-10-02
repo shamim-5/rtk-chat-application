@@ -1,6 +1,7 @@
 import { apiSlice } from "../api/apiSlice";
 import { messagesApi } from "../messages/messagesApi";
 import io from "socket.io-client";
+import { useEffect } from "react";
 
 export const conversationsApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
@@ -81,22 +82,40 @@ export const conversationsApi = apiSlice.injectEndpoints({
         body: data,
       }),
       async onQueryStarted(arg, { queryFulfilled, dispatch }) {
-        const conversation = await queryFulfilled;
-        if (conversation?.data?.id) {
-          // silent entry to message table
-          const users = arg.data.users;
-          const senderUser = users.find((user) => user.email === arg.sender);
-          const receiverUser = users.find((user) => user.email !== arg.sender);
+        // optimistic cache update start
+        const postResult = dispatch(
+          apiSlice.util.updateQueryData("getConversations", arg.sender, (draft) => {
+            const users = arg.data.users;
+            const senderUser = users.find((user) => user.email === arg.sender);
 
-          dispatch(
-            messagesApi.endpoints.addMessage.initiate({
-              conversationId: conversation?.data?.id,
-              sender: senderUser,
-              receiver: receiverUser,
-              message: arg.data.message,
-              timestamp: arg.data.timestamp,
-            })
-          );
+            if (senderUser) {
+              draft.data.unshift({ ...arg?.data, id: draft?.data.length + 1 });
+              console.log(JSON.stringify(draft.data));
+            }
+          })
+        );
+        // optimistic cache update end
+
+        try {
+          const conversation = await queryFulfilled;
+          if (conversation?.data?.id) {
+            // silent entry to message table
+            const users = arg.data.users;
+            const senderUser = users.find((user) => user.email === arg.sender);
+            const receiverUser = users.find((user) => user.email !== arg.sender);
+
+            dispatch(
+              messagesApi.endpoints.addMessage.initiate({
+                conversationId: conversation?.data?.id,
+                sender: senderUser,
+                receiver: receiverUser,
+                message: arg.data.message,
+                timestamp: arg.data.timestamp,
+              })
+            );
+          }
+        } catch (err) {
+          postResult.undo();
         }
       },
     }),
