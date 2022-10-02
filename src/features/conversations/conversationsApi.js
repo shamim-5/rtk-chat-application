@@ -136,12 +136,12 @@ export const conversationsApi = apiSlice.injectEndpoints({
             ).unwrap();
 
             // update messages cache pessimistically start
-            dispatch(
-              apiSlice.util.updateQueryData("getMessages", res.conversationId.toString(), (draft) => {
-                // draft.push(res);
-                console.log(res);
-              })
-            );
+            // dispatch(
+            //   apiSlice.util.updateQueryData("getMessages", res.conversationId.toString(), (draft) => {
+            //     // draft.push(res);
+            //     console.log(res);
+            //   })
+            // );
             // update messages cache pessimistically end
           }
         } catch (err) {
