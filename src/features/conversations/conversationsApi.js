@@ -90,7 +90,6 @@ export const conversationsApi = apiSlice.injectEndpoints({
 
             if (senderUser) {
               draft.data.unshift({ ...arg?.data, id: draft?.data.length + 1 });
-              console.log(JSON.stringify(draft.data));
             }
           })
         );
